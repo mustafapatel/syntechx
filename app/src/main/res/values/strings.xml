@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">SynTech-X</string>
+    <string name="about_content">After working in the Internet business at various web agencies for over twelve years, he now runs
+his own company called De Vier Koeden (http://devierkoeden.com), a small Internet agency
+specializing in consultancy and development of Internet and intranet applications with Microsoft
+technologies such as ASP.NET 4.5.1. He’s also the CTO of Dynamicweb North America, the U.S.
+branch of the popular Danish content management, e-commerce, and online marketing platform.
+</string>
+
+    <string name="tagline">Concepts Beyond Programming</string>
 </resources>
