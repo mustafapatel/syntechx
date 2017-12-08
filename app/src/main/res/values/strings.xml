@@ -1,11 +1,25 @@
 <resources>
     <string name="app_name">SynTech-X</string>
-    <string name="about_content">After working in the Internet business at various web agencies for over twelve years, he now runs
-his own company called De Vier Koeden (http://devierkoeden.com), a small Internet agency
-specializing in consultancy and development of Internet and intranet applications with Microsoft
-technologies such as ASP.NET 4.5.1. He’s also the CTO of Dynamicweb North America, the U.S.
-branch of the popular Danish content management, e-commerce, and online marketing platform.
-</string>
 
-    <string name="tagline">Concepts Beyond Programming</string>
+
+    <string name="background_content">{SynTech-X ’17 – ‘18}, the Annual Curriculum Intense Intercollegiate Computer Science Festival of R.D. and S.H. National College, is a pool of technical events for all those who are more than just passionate about the ever emerging computer technology. It provides a platform to students to showcase their talents, technical skills and explore the practical dimensions of education imparted through the curriculum. </string>
+
+
+    <string name="objective_content">
+        The main aim of this festival is to understand and strengthen the technical concepts taught in the class .These are then applied through a number of activities, perfectly blended with entertainment and technology. Another objective of the festival is to promote talent by developing e-skills and to provide innovation in the emerging areas of technology. {SynTech-X}, a mixture of traditional ideology and modern technologies, provides an opportunity to the passionate minds to inculcate skills of calculated risk and also of learning to think on one’s feet.
+    </string>
+    
+    
+    <string name="events_content">
+        The festival offers a plethora of events in which the participants can exhibit their skills in brain storming events – like SynTechXist (the Computer Science Quiz), D–Code, Minute to Code it, Code in the Dark, as well as artistic events like Affiche (Poster-Designing) and Rete Designo (Web Designing), Lab Crap (Best Out of Waste). Popular events like Ad-Mad and Power-Point Presentation Competition and ‘Fun-tastic’ events like Swift Keys and Syoogle (e-Treasure Hunt), LAN Gaming, the most popular event, draws students from all fields to our festival.
+    </string>
+    
+    
+    <string name="special_content">
+        Perpetuating the tradition, the department will be inviting two prominent personalities; one from the academic field, and one from the industry. They will enlighten the participants on the theme: “Cyber Safety” during the inaugural session.
+We also propose to organize an Alumni Meet of the Computer Science students on 20th January, 2018.
+    </string>
+
+
+    <string name="theme">Cyber Safety</string>
 </resources>

@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:layout_height="wrap_content"
+
 
     >
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!--Titles-->
 
     <TextView
         android:layout_width="match_parent"
@@ -24,22 +31,106 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/white"
-        android:text="@string/tagline"
+        android:text="@string/theme"
         android:gravity="center"
         android:textSize="25sp"
         android:background="@color/colorPrimary"
         android:paddingBottom="25sp"
+        />
 
+    <!--Content-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+
+        <!--Background-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/subtitle"
+        android:text="Background"
+        android:textSize="20sp"
+        android:paddingTop="25sp"
+        android:textStyle="bold"
         />
 
     <TextView
-        android:padding="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/content"
-        android:text="@string/about_content"
+        android:text="@string/background_content"
+        android:textSize="18sp"/>
+
+
+        <!--Objective-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/subtitle"
+        android:text="Objective"
+        android:gravity="left"
         android:textSize="20sp"
+        android:paddingTop="25sp"
+        android:textStyle="bold"
         />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/content"
+        android:text="@string/objective_content"
+        android:textSize="18sp"/>
+
+
+        <!--Events-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/subtitle"
+        android:text="Events and their Curriculum Aspects"
+        android:gravity="left"
+        android:textSize="20sp"
+        android:paddingTop="25sp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/content"
+        android:text="@string/events_content"
+        android:textSize="18sp"/>
+
+        <!--Special-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/subtitle"
+        android:text="Special Features"
+        android:gravity="left"
+        android:textSize="20sp"
+        android:paddingTop="25sp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/content"
+        android:text="@string/special_content"
+        android:textSize="18sp"/>
+
+    </LinearLayout>
 
 
 </LinearLayout>
+
+</ScrollView>
