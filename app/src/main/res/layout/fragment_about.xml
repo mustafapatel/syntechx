@@ -1,44 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-
-
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     >
 
-<LinearLayout
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:titleTextColor="@color/white"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:id="@+id/about_page_toolbar"
+            android:background="#212121"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+<android.support.v4.widget.NestedScrollView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
-
-    <!--Titles-->
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="SynTech-X '17-'18"
-        android:textColor="@color/whiteBrighter"
-        android:textSize="45sp"
-        android:gravity="center"
-        android:paddingTop="25sp"
-        android:textStyle="bold"
-        android:background="@color/colorPrimary"
-
-        />
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:background="@color/colorPrimary">
 
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:text="@string/theme"
-        android:gravity="center"
-        android:textSize="25sp"
-        android:background="@color/colorPrimary"
-        android:paddingBottom="25sp"
-        />
-
-    <!--Content-->
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -49,14 +38,30 @@
 
         <!--Background-->
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorAccent"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/subtitle"
         android:text="Background"
         android:textSize="20sp"
-        android:paddingTop="25sp"
         android:textStyle="bold"
+        android:gravity="center"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorAccent"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
         />
 
     <TextView
@@ -64,21 +69,39 @@
         android:layout_height="wrap_content"
         android:textColor="@color/content"
         android:text="@string/background_content"
-        android:textSize="18sp"/>
+        android:textSize="18sp"
+
+        />
 
 
         <!--Objective-->
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorAccent"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/subtitle"
         android:text="Objective"
-        android:gravity="left"
         android:textSize="20sp"
-        android:paddingTop="25sp"
+        android:gravity="center"
         android:textStyle="bold"
         />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorAccent"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            />
 
     <TextView
         android:layout_width="match_parent"
@@ -90,16 +113,33 @@
 
         <!--Events-->
 
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorAccent"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/subtitle"
         android:text="Events and their Curriculum Aspects"
-        android:gravity="left"
+        android:gravity="center"
         android:textSize="20sp"
-        android:paddingTop="25sp"
+
         android:textStyle="bold"
         />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorAccent"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            />
 
     <TextView
         android:layout_width="match_parent"
@@ -110,16 +150,31 @@
 
         <!--Special-->
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorAccent"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/subtitle"
         android:text="Special Features"
-        android:gravity="left"
+        android:gravity="center"
         android:textSize="20sp"
-        android:paddingTop="25sp"
         android:textStyle="bold"
         />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorAccent"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            />
 
     <TextView
         android:layout_width="match_parent"
@@ -131,6 +186,7 @@
     </LinearLayout>
 
 
-</LinearLayout>
 
-</ScrollView>
+</android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

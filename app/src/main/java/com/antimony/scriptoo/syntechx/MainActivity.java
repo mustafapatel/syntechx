@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.navigation_about:
                         selected = AboutFragment.getInstance();
                     case R.id.navigation_events:
-                        //dfdf
+                        selected = EventsFragment.getInstance();
                 }
 
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();

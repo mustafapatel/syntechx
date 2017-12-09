@@ -1,6 +1,5 @@
 package com.antimony.scriptoo.syntechx;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -10,37 +9,36 @@ import android.view.View;
 import android.view.ViewGroup;
 
 /**
- * Created by antimony on 12/5/17.
+ * Created by antimony on 12/10/17.
  */
 
-public class AboutFragment extends Fragment {
+public class EventsFragment extends Fragment {
+
 
     Toolbar toolbar;
 
 
-    public static AboutFragment getInstance(){
-        AboutFragment fragment = new AboutFragment();
+    public static EventsFragment getInstance(){
+        EventsFragment fragment = new EventsFragment();
         return fragment;
     }
+
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
-
     @Override
-    public void onResume() {
-        super.onResume();
-        toolbar = (Toolbar)getActivity().findViewById(R.id.about_page_toolbar);
+    public void onStart() {
+        super.onStart();
+        toolbar = (Toolbar)getActivity().findViewById(R.id.events_toolbar);
         toolbar.setTitle(getString(R.string.app_name));
     }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_about, container, false);
-
+        return inflater.inflate(R.layout.fragment_events, container, false);
     }
 }

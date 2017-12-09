@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#1f78db</color>
-    <color name="colorPrimaryDark">#16569d</color>
-    <color name="colorAccent">#cc4343</color>
+    <color name="colorPrimary">#424242</color>
+    <color name="colorPrimaryDark">#212121</color>
+    <color name="colorAccent">#ffd600</color>
+
+    <color name="navbar">#424242</color>
     <color name="white">#ccffffff</color>
     <color name="whiteBrighter">#e5ffffff</color>
-    <color name="title">#cc000000</color>
-    <color name="subtitle">#b2000000</color>
-    <color name="content">#99000000</color>
+    <color name="title">#ccffffff</color>
+    <color name="subtitle">#b2ffffff</color>
+    <color name="content">#99ffffff</color>
 </resources>
