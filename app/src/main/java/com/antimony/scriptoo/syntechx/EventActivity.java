@@ -1,5 +1,6 @@
 package com.antimony.scriptoo.syntechx;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.os.Bundle;
@@ -36,18 +37,12 @@ public class EventActivity extends AppCompatActivity {
         location= (TextView)findViewById(R.id.location_textview);
         heads = (TextView)findViewById(R.id.heads_textview);
         header = (ImageView)findViewById(R.id.event_page_header);
+        Intent i = getIntent();
+        int eventid = i.getIntExtra("ID", 1);
 
 
 //        setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
 
         //EVENT CODE
@@ -56,7 +51,7 @@ public class EventActivity extends AppCompatActivity {
         //CREATE
         try{
             dh.createDatabase();
-        }catch (IOException i){
+        }catch (IOException ioe){
             throw new Error("Unable to create");
         }
 
@@ -67,7 +62,7 @@ public class EventActivity extends AppCompatActivity {
         }
 
 
-        Cursor c = dh.getEvent(4);
+        Cursor c = dh.getEvent(eventid+2);
 
         EventClass event = new EventClass(c);
 

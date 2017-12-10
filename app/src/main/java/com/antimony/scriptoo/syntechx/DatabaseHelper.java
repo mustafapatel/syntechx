@@ -6,6 +6,7 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 import android.widget.Toast;
 
 import java.io.FileOutputStream;
@@ -27,7 +28,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     private static String DB_PATH = "/data/data/com.antimony.scriptoo.syntechx/databases/";
     private static String DB_NAME = "syntechx";
-    private static int DBVERSION = 1;
+    private static int DBVERSION = 2;
 
     //EVENT COLUMNS
     public static String EVENT_NAME = "name";
@@ -48,8 +49,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public void createDatabase() throws IOException{
-        //boolean dbExist = checkDatabase();
-        boolean dbExist = false;
+        boolean dbExist = checkDatabase();
+
 
         if(dbExist){
             //kuch mat kar; database hai
@@ -77,7 +78,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
 
         if(checkDB !=null){
-            checkDB.close();
+//            checkDB.close();
         }
 
         return checkDB !=null;
@@ -89,7 +90,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String outFileName = DB_PATH + DB_NAME;
         OutputStream myOutput = new FileOutputStream(outFileName);
 
-        byte[] buffer = new byte[4096];
+        byte[] buffer = new byte[16384];
         int length;
         while((length = myInput.read(buffer))>0){
             myOutput.write(buffer, 0, length);
@@ -146,7 +147,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        //KUCH TOH
+        if(newVersion>oldVersion){
+            try {
+                copyDataBase();
+            }catch (IOException e){
+                Log.d("DB", "Oops");
+            }
+        }
     }
 
     public Cursor getEvent(int id){
