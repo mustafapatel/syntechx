@@ -8,13 +8,13 @@
     <string name="objective_content">
         The main aim of this festival is to understand and strengthen the technical concepts taught in the class .These are then applied through a number of activities, perfectly blended with entertainment and technology. Another objective of the festival is to promote talent by developing e-skills and to provide innovation in the emerging areas of technology. {SynTech-X}, a mixture of traditional ideology and modern technologies, provides an opportunity to the passionate minds to inculcate skills of calculated risk and also of learning to think on one’s feet.
     </string>
-    
-    
+
+
     <string name="events_content">
         The festival offers a plethora of events in which the participants can exhibit their skills in brain storming events – like SynTechXist (the Computer Science Quiz), D–Code, Minute to Code it, Code in the Dark, as well as artistic events like Affiche (Poster-Designing) and Rete Designo (Web Designing), Lab Crap (Best Out of Waste). Popular events like Ad-Mad and Power-Point Presentation Competition and ‘Fun-tastic’ events like Swift Keys and Syoogle (e-Treasure Hunt), LAN Gaming, the most popular event, draws students from all fields to our festival.
     </string>
-    
-    
+
+
     <string name="special_content">
         Perpetuating the tradition, the department will be inviting two prominent personalities; one from the academic field, and one from the industry. They will enlighten the participants on the theme: “Cyber Safety” during the inaugural session.
 We also propose to organize an Alumni Meet of the Computer Science students on 20th January, 2018.
@@ -27,4 +27,5 @@ We also propose to organize an Alumni Meet of the Computer Science students on 2
 
 
     <string name="theme">Cyber Safety</string>
+    <string name="title_activity_event">EventActivity</string>
 </resources>

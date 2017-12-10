@@ -1,5 +1,6 @@
 package com.antimony.scriptoo.syntechx;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
@@ -35,13 +36,16 @@ public class MainActivity extends AppCompatActivity {
                 switch (item.getItemId()){
                     case R.id.navigation_about:
                         selected = AboutFragment.getInstance();
+                        break;
                     case R.id.navigation_events:
-                        selected = EventsFragment.getInstance();
+                        Intent i = new Intent(getBaseContext(), EventActivity.class);
+                        startActivity(i);
+                        break;
                 }
 
-                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                transaction.replace(R.id.main_frame_layout, selected);
-                transaction.commit();
+//                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+//                transaction.replace(R.id.main_frame_layout, selected);
+//                transaction.commit();
                 return true;
 
             }
