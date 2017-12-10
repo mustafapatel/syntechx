@@ -24,7 +24,7 @@
                 android:background="@drawable/events_bg"
                 android:scaleType="centerCrop"
                 app:layout_collapseMode="parallax"
-
+                android:id="@+id/event_page_header"
                 />
 
             <android.support.v7.widget.Toolbar
