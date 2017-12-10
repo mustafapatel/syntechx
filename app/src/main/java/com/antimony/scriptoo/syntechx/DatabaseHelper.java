@@ -6,11 +6,13 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.Toast;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.ArrayList;
 
 /**
  * Created by antimony on 12/6/17.
@@ -18,6 +20,9 @@ import java.io.OutputStream;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
+
+
+    public static DatabaseHelper object = null;
 
 
     private static String DB_PATH = "/data/data/com.antimony.scriptoo.syntechx/databases/";
@@ -35,7 +40,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     private SQLiteDatabase myDatabase;
     private final Context myContext;
-
 
 
     public DatabaseHelper(Context context){
@@ -110,6 +114,28 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             myDatabase.close();
         }
         super.close();
+    }
+
+    public ArrayList<EventClass> getAllEvents(){
+
+
+        ArrayList<EventClass> array = new ArrayList<>();
+
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        String query = "SELECT id, " +
+                        EVENT_NAME + ", " +
+                        EVENT_BACKGROUND + " FROM events;";
+
+        Cursor c = db.rawQuery(query, null);
+        c.moveToFirst();
+
+        while(c.moveToNext()){
+            array.add(new EventClass(c.getString(c.getColumnIndex(this.EVENT_NAME)),c.getString(c.getColumnIndex(this.EVENT_BACKGROUND))));
+
+        }
+
+        return array;
     }
 
     @Override

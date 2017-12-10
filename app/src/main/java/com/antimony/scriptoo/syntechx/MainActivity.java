@@ -38,14 +38,13 @@ public class MainActivity extends AppCompatActivity {
                         selected = AboutFragment.getInstance();
                         break;
                     case R.id.navigation_events:
-                        Intent i = new Intent(getBaseContext(), EventActivity.class);
-                        startActivity(i);
+                        selected = EventsFragment.getInstance();//
                         break;
                 }
 
-//                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-//                transaction.replace(R.id.main_frame_layout, selected);
-//                transaction.commit();
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.main_frame_layout, selected);
+                transaction.commit();
                 return true;
 
             }

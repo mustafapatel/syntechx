@@ -4,13 +4,33 @@ import android.database.Cursor;
 
 import com.antimony.scriptoo.syntechx.DatabaseHelper;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created by antimony on 12/10/17.
  */
 
 public class EventClass {
 
-    public String name, rules, description, timing, date, location, header;
+    public String name, rules, description, timing, date, location, background;
+    Map map;
+
+    public int getEventBackgroundResource(){
+        if (background.equals("admad.jpg"))
+            return R.drawable.admad;
+        else if (background.equals("swiftkeys.jpg"))
+            return R.drawable.swiftkeys;
+        else if (background.equals("affiche.jpg"))
+            return R.drawable.affiche;
+        else
+            return R.drawable.dcode;
+    }
+
+    public EventClass(String name, String background){
+        this.name = name;
+        this.background = background;
+    }
 
     public EventClass(Cursor c){
 

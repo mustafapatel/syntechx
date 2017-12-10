@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -32,11 +33,14 @@ public class EventsAdapter extends ArrayAdapter<EventClass> {
         }
         //INFLATE THE VIEW
 
+
         //POPULATE THE STUFF
         TextView name = (TextView)convertView.findViewById(R.id.event_card_title);
         name.setText(event.name);
 
+        ImageView image = (ImageView)convertView.findViewById(R.id.events_card_background);
+        image.setBackgroundResource(event.getEventBackgroundResource());
 
-        return super.getView(position, convertView, parent);
+        return convertView;
     }
 }
